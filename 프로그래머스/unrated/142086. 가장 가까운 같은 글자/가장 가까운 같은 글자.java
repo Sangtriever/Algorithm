@@ -10,7 +10,6 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             if(az[(int)s.charAt(i)-97] == -1){
                 answer[i] = -1;
-                System.out.println(answer[i]);
             }else{
                 answer[i] = i-az[(int)s.charAt(i)-97];
             }
