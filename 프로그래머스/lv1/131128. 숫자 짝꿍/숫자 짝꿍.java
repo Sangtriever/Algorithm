@@ -13,7 +13,6 @@ class Solution {
                 }
             }
         }
-        String result;
         if (answer.toString().equals("")) {
             return "-1";
         } else if (answer.toString().replace("0","").equals("")) {
