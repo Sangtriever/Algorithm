@@ -1,22 +1,16 @@
+import java.util.Arrays;
+
 class Solution {
     public String solution(String s) {
         String answer = "";
-
-
         String[] sList = s.split(" ");
-        int maxNum = Integer.parseInt(sList[0]);
-        int minNum = Integer.parseInt(sList[0]);
+        int[] numList = new int[sList.length];
         for (int i = 0; i < sList.length; i++) {
-            if(minNum > Integer.parseInt(sList[i])){
-                minNum = Integer.parseInt(sList[i]);
-                continue;
-            }
-            if(maxNum < Integer.parseInt(sList[i])){
-                maxNum = Integer.parseInt(sList[i]);
-                continue;
-            }
+            numList[i] = Integer.parseInt(sList[i]);
         }
-        answer = minNum + " " + maxNum;
+        Arrays.sort(numList);
+        System.out.println(Arrays.toString(numList));
+        answer = numList[0] + " " + numList[numList.length-1];
         return answer;
     }
 }
