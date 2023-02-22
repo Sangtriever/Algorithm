@@ -25,6 +25,8 @@ class Solution {
             reportedList.add(reported);
         }
         reportUser.put(name,reportedList);
+        
+        // 신고 메일 받을사람 선정?
         for (int i = 0; i < id_list.length; i++) {
             if(reportUser.get(id_list[i]) != null){
                 for (int j = 0; j < reportUser.get(id_list[i]).size(); j++) {
