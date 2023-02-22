@@ -17,10 +17,6 @@ class Solution {
                 answer.add(i+1);
             }
         }
-        // int[] answer = new int[list.size()];
-        // for (int i = 0; i < list.size(); i++) {
-        //     answer[i] = list.get(i);
-        // }
         return answer;
     }
     public int dayCur(String days){
