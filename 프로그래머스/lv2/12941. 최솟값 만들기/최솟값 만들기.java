@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
-class Solution
-{
+class Solution{
     public int solution(int []A, int []B){
         int answer = 0;
         Arrays.sort(A);
