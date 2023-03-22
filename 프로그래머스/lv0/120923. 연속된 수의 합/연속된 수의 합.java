@@ -3,10 +3,9 @@ import java.util.Arrays;
 class Solution {
     public int[] solution(int num, int total) {
         int[] answer = new int[num];
-        int sum = -100;
         int cnt = total/2;
-        while (sum != total){
-            sum = 0;
+        while (true){
+            int sum = 0;
             for (int i = 0; i < num; i++) {
                 sum += cnt+i;
             }
@@ -14,11 +13,10 @@ class Solution {
                 cnt--;
             }else if (sum < total){
                 cnt++;
+            }else{
+                break;
             }
-            System.out.println(cnt);
-            System.out.println(sum);
-            System.out.println(total);
-            System.out.println();
+
         }
         for (int i = 0; i < num; i++) {
             answer[i] = cnt+i;
