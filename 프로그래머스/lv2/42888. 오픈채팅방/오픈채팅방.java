@@ -9,9 +9,6 @@ class Solution {
             String type = record[i].split(" ")[0];
             String uid = record[i].split(" ")[1];
             String[] s = {type,uid};
-//            if(!input.containsKey(uid)){
-//                input.put(uid,record[i].split(" ")[2]);
-//            }
             if(type.equals("Change")) {
                 input.put(uid,record[i].split(" ")[2]);
             }else if(type.equals("Enter")){
