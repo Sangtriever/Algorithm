@@ -1,6 +1,6 @@
 # Algorithm
 
-### 개인글 정리 블로그
+### 개인글 정리 블로그 
  => https://www.notion.so/c66acd50ac01482f8a889a9998339fd0
  <br>
 ### 코딩 문제 날짜별 정리
