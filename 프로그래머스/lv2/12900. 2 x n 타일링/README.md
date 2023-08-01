@@ -1,10 +1,10 @@
 # [level 2] 2 x n 타일링 - 12900 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12900) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12900?language=java) 
 
 ### 성능 요약
 
-메모리: 52.3 MB, 시간: 2.43 ms
+메모리: 52.4 MB, 시간: 1.54 ms
 
 ### 구분
 
