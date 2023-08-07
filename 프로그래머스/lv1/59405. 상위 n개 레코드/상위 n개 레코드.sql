@@ -1,4 +1,6 @@
-select name
-from animal_ins
-order by datetime
-limit 1
+SELECT *
+FROM (SELECT NAME
+        FROM ANIMAL_INS
+        ORDER BY DATETIME)
+WHERE ROWNUM = 1
+
