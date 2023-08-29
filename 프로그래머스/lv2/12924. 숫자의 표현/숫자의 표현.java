@@ -1,18 +1,18 @@
 class Solution {
     public int solution(int n) {
-        int answer = 0;
-        for (int i = 1; i < n+1; i++) {
+        int answer = 1;
+        for (int i = 1; i < n/2+1; i++) {
             int sum = 0;
             for (int j = i; j < n; j++) {
                 sum += j;
-                if(sum == n){
-                    answer++;
-                }
                 if(sum > n){
+                    break;
+                }else if(sum == n){
+                    answer++;
                     break;
                 }
             }
         }
-        return answer+1;
+        return answer;
     }
 }
