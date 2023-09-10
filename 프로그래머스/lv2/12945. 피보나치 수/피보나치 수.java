@@ -1,14 +1,12 @@
 class Solution {
     public int solution(int n) {
-        int answer[] = new int[n+1];
-        for (int i = 0; i <= n; i++) {
-            if (i == 0) answer[i] = 0;
-            else if (i == 1) answer[i] = 1;
-            else {
-                int sum = answer[i-2] + answer[i-1];
-                answer[i] = sum % 1234567;
-            }
+        int answer = 0;
+        int[] dp = new int[100001];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = (dp[i-1] + dp[i-2])%1234567;
         }
-        return answer[n];
+        return dp[n]%1234567;
     }
 }
