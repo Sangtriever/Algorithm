@@ -1,19 +1,20 @@
 class Solution {
     public String solution(String s) {
-        StringBuilder answer = new StringBuilder();
-        char[] sList = s.toCharArray();
-        int cnt = 0;
-        for (int i = 0; i < sList.length; i++){
-            if(cnt == 0 && sList[i] > 90) sList[i] = (char) (sList[i]-32);
-            if(cnt != 0 && sList[i] < 97 && sList[i] != ' ') sList[i] = (char) (sList[i]+32);
-            cnt++;
-            if(sList[i] == ' '){
-                cnt = 0;
-                answer.append((char) 32);
-            }else{
-                answer.append(sList[i]);
+        String answer = "";
+        s = s.toLowerCase();
+        char[] list = s.toCharArray();
+        int idx = 0;
+        for (int i = 0; i < list.length; i++) {
+            if(idx == 0){
+                if(list[i] > 96){
+                    list[i] -= 32;
+                }
+                idx = 0;
             }
+            idx++;
+            if(list[i] == 32) idx = 0;
+            answer += list[i];
         }
-        return answer.toString();
+        return answer;
     }
 }
