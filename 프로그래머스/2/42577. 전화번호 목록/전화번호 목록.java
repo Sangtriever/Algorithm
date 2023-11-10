@@ -1,14 +1,20 @@
 import java.util.Arrays;
 
 class Solution {
-    public boolean solution(String[] phoneBook) {
-        Arrays.sort(phoneBook);
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        Arrays.sort(phone_book);
 
-        for (int i = 1; i < phoneBook.length; i++) {
-            if (phoneBook[i].startsWith(phoneBook[i - 1])) {
-                return false;
+        loop :
+        for (int i = 1; i < phone_book.length; i++) {
+            for (int j = 0; j < phone_book[i-1].length(); j++) {
+                if(phone_book[i-1].charAt(j) != phone_book[i].charAt(j)){
+                    continue loop;
+                }
             }
+            answer = false;
+            break;
         }
-        return true;
+        return answer;
     }
 }
